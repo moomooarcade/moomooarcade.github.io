@@ -50,6 +50,7 @@ function selectionPreload(){
 	this.load.image('hwasa', 'andar-hwasa.png');
 	this.load.image('sel-wheein', 'andar-selection-wheein.png');
 	this.load.image('wheein', 'andar-wheein.png');
+	this.load.image('select-text', 'text-selection.png');
 
 	console.log("selection preload");
 }
@@ -60,6 +61,7 @@ function selectionCreate(){
 	createButton(this,'solar', 187.5);
 	createButton(this,'wheein', 312.5);
 	createButton(this,'hwasa', 437.5);
+	var image = this.add.image(250, 300, 'select-text').setOrigin(0.5);
 	
 }
 
@@ -192,7 +194,6 @@ function createObstacle(){
 }
 
 function createCabinet(){
-	console.log("create Cabinet");
 	var cabinet = main.physics.add.sprite(530, 235, 'cabinet');
 	cabinet.setScale(.25);
 	cabinet.body.allowGravity = false;
@@ -274,7 +275,7 @@ function gameover(){
 	var playagain = main.add.rectangle(165, 243, 148 , 43).setInteractive();
 	playagain.on('pointerup', () => {main.scene.start('selection'); score = 0; level = 1;});
 	var tweetScore = main.add.rectangle(338, 243, 148, 43).setInteractive();
-	var tweet = "I scored: " + score + " in MAMAMOO Andar Jump while streaming 'WANNABE MY SELF' bit.ly/3hoUcfn #MAMAMOO #마마무 @RBW_MAMAMOO pic.twitter.com/TTqpVDR8OC";
+	var tweet = "I scored: " + score + " in MAMAMOO Andar Jump (moomooarcade.github.io) while streaming 'WANNA BE MYSELF' (bit.ly/3hoUcfn) #MAMAMOO #마마무 @RBW_MAMAMOO";
 	//watchVideo.on('pointerup', () => {window.open('https://youtu.be/sk-qyR224fU');});
 	var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
 	tweetScore.on('pointerup', () => {window.open(url, '_bank');});
