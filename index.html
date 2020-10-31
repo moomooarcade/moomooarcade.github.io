@@ -3,10 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="game-style.css" rel="stylesheet">
+	<link href="index-style.css" rel="stylesheet">
 	<script type="text/javascript" src="phaser.min.js"></script>
-	<script type="text/javascript" src="andarJump.js"></script>
 	<title>MooMooArcade</title>
+	<script src="MMMIceCream/TemplateData/UnityProgress.js"></script>
+    <script src="MMMIceCream/Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "MMMIceCream/Build/Builds.json", {onProgress: UnityProgress});
+    </script>
 </head>
 <body>
 	<div class="header">
@@ -22,19 +26,19 @@
 	</div>
 	<div style="font-family:AGENCYR; position: absolute; left:-1000px; visibility:hidden;">.</div>
 	<div class="contentHeader"> 
-		<b>Mamamoo X Andar Collaboration: Wanna Be Myself</b>
+		<b>딩가딩가</b>
 	</div>
 	<div class="container">
 		<div id = "mainContent" class = "mainContent">
-			<div id = "gameContent" class = "subContent"></div>
-			<div id ="videoContent" class="subContent">
-			<iframe width="500" height="350" src="https://www.youtube.com/embed/sk-qyR224fU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div id = "gameContent" class = "subContent">
+				<div id="unityContainer" style="width: 900px; height: 600px"></div>
 			</div>
 		</div>
 		
 
 		<div id="rightSidebar" class="rightSidebar">
-			<iframe src="https://open.spotify.com/embed/playlist/1PBkgKJbs66oHvvsuCZb5N" width="300" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<iframe width="500" height="350" src="https://www.youtube.com/embed/dfl9KIX1WpU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://open.spotify.com/embed/playlist/1PBkgKJbs66oHvvsuCZb5N" width="500" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 		</div>
 	</div>
 	
